@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Contact Us</h1>
+    <p>If you have any questions or concerns regarding our web application, please let us know by filling out a support ticket below.</p>
+</div>
+<div class="text" id="FormContainer">
+    <form id="ContactForm">
+        <label for="FirstName">First Name:</label><br />
+        <input id="FirstName" type="text" name="FName" required/><br />
+        <label for="LastName">Last Name:</label><br />
+        <input id="LastName" type="text" name="LName" required/><br />
+        <label for="Email">Email Address</label><br />
+        <input id="Email" type="email" name="Email" required/><br />
+        <label for="Phone">Primary phone number:</label><br />
+        <input id ="Phone" type="tel" placeholder="1234567890" name="Phone" required/><br />
+        <label for="Time">Best time to reach you:</label><br />
+        <input id="Time" type="time" name="Time" /><br />
+        <label for="Comments">Please ask questions or comments in the space below:</label><br />
+        <textarea id="Comments" name="Comments" rows="10" cols="120"></textarea><br />
+        <input type="submit" />
+    </form>
+</div>
