@@ -58,7 +58,7 @@ namespace StacWebApp.Controllers
             com.Parameters.AddWithValue("@LastName", obj.LName);
             com.Parameters.AddWithValue("@Email", obj.Email);
             com.Parameters.AddWithValue("@Phone", obj.Phone);
-            com.Parameters.AddWithValue("@Date", obj.ContactTime);
+            com.Parameters.AddWithValue("@ConTimeDate", obj.ContactDateTime);
             com.Parameters.AddWithValue("@Comments", obj.Comments);
              
              

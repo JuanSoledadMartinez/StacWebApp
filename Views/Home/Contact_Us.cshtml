@@ -1,28 +1,56 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model StacWebApp.Models.ContactModel
+
 @{
-    ViewData["Title"] = "Contact Us";
+    ViewData["Title"] = "ContactUs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Contact Us</h1>
-    <p>If you have any questions or concerns regarding our web application, please let us know by filling out a support ticket below.</p>
+<h1>ContactUs</h1>
+
+<h4>ContactModel</h4>
+<hr />
+
+<form asp-action="Contact_Us">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="FName" class="control-label">First Name</label>
+        <input asp-for="FName" class="form-control"/>
+        <span asp-validation-for="FName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LName" class="control-label">Last Name</label>
+        <input asp-for="LName" class="form-control"/>
+        <span asp-validation-for="LName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" class="control-label">Email</label>
+        <input asp-for="Email" class="form-control"/>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Phone" class="control-label">Phone Number</label>
+        <input asp-for="Phone" class="form-control"/>
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ContactDateTime" class="control-label">Date</label>
+        <input asp-for="ContactDateTime" class="form-control"/>
+        <span asp-validation-for="ContactDateTime" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Comments" class="control-label">Comments</label>
+        <input asp-for="Comments" class="form-control"/>
+        <span asp-validation-for="Comments" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
 </div>
-<div class="text" id="FormContainer">
-    <form id="ContactForm">
-        <label for="FirstName">First Name:</label><br />
-        <input id="FirstName" type="text" name="FName" required/><br />
-        <label for="LastName">Last Name:</label><br />
-        <input id="LastName" type="text" name="LName" required/><br />
-        <label for="Email">Email Address</label><br />
-        <input id="Email" type="email" name="Email" required/><br />
-        <label for="Phone">Primary phone number:</label><br />
-        <input id ="Phone" type="tel" placeholder="1234567890" name="Phone" required/><br />
-        <label for="Time">Best time to reach you:</label><br />
-        <input id="Time" type="time" name="Time" /><br />
-        <label for="Comments">Please ask questions or comments in the space below:</label><br />
-        <textarea id="Comments" name="Comments" rows="10" cols="120"></textarea><br />
-        <input type="submit" />
-    </form>
-</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

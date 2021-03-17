@@ -31,11 +31,11 @@ namespace StacWebApp.Models
         [Required(ErrorMessage = "Insurance number is required.")]
         public int Insurance { get; set; }
 
-        [Required(ErrorMessage = "Please choose a Doctor.")]
+       /* [Required(ErrorMessage = "Please choose a Doctor.")]
         public string Doctor { get; set; }
 
         [Required(ErrorMessage = "Please choose a location.")]
-        public string Location { get; set; }
+        public string Location { get; set; }*/
 
 
     }

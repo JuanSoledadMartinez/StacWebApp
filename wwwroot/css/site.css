@@ -62,13 +62,13 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
-.footer {
+/*.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
-}
+  line-height: 60px;  Vertically center the text there 
+}*/
 
 div.login-logout-tab div.card-header{
     padding: 0px 0px 12px 0px;
@@ -94,4 +94,205 @@ div.card-content{
 
 div.login-form-icon{
     text-align: center;
+}
+* {
+    box-sizing: border-box
+}
+
+/* Set height of body and the document to 100% */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Lobster, cursive;
+}
+
+body {
+    background-image: url('KidsMedical.jpg');
+}
+
+h1 {
+    position: relative;
+    font-size: 60px;
+    margin-top: 0;
+    font-family: 'Lobster', cursive;
+    color: rgb(224, 238, 224);
+}
+
+
+form {
+    border: 1px solid #f1f1f1;
+}
+
+input[type=text], input[type=password], input[type=date], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 30%;
+    border-radius: 20%;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+.appointment-wraper, .contact-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    justify-content: center;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.home-wrapper {
+    background-color: greenyellow;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 200px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+
+.tablink {
+    background-color: #555;
+    color: white;
+    font-family: 'Lobster', cursive;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    font-size: 17px;
+    width: 20%;
+    margin-top: 0;
+}
+
+    .tablink:hover {
+        background-color: #777;
+    }
+
+/* Style the tab content (and add height:100% for full page content) */
+
+#Home {
+    background-image: url("/images/KidsMedical.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#Doctors {
+    background-image: url("/images/Docs.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Lobster', cursive;
+    color: rgb(255, 255, 255);
+}
+
+#Appointments {
+    background-image: url("/images/Relaxing.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Lobster', cursive;
+    color: white;
+}
+
+#Contact {
+    background-image: url("/images/BackgroundCon.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#About {
+    background-image: url("/images/BackgroundHos.jpg");
+    font-family: 'Lobster', cursive;
+    color: rgb(37, 10, 10);
+    font-size: 15px;
+}
+
+.text-center {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: white;
+    font-size: 30px;
+}
+
+form {
+    max-width: 50vw;
+    margin: 0 auto;
+    border: 0;
 }

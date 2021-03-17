@@ -15,7 +15,7 @@ namespace StacWebApp.Models
 
         public string Phone { get; set; }
 
-        public DateTime ContactTime { get; set; }
+        public string ContactDateTime { get; set; }
 
         public string Comments { get; set; }
     }
